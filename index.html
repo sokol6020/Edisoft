@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <title>Календарь</title>
+
+    <link rel="shortcut icon" href="./images/headermenu/mini_logo.ico" type="image/x-icon">
+    
+    <!-- Подгрузка стилей --> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css?<?php echo time();?>"/>   
+    <!-- Подгрузка скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+  <?php include ('./includes/headermenu.php'); ?>
+
+<section class="main">
+<div class="left-calendar">
+  <div class="container-head">
+    <div class="head-string">Главная&emsp; / &emsp;Маршруты по дням</div>
+    <div class="head-name">Маршруты по дням</div>
+    <div class="filters">
+      <div class="filter-big">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Text input with dropdown button">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button"  data-bs-toggle="dropdown" aria-expanded="false">ФИО</button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a class="dropdown-item" href="#">1</a></li>
+            <li><a class="dropdown-item" href="#">2</a></li>
+            <li><a class="dropdown-item" href="#">3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="add-new">
+        <div class="add-text" onclick="exampleModal.toggle();">Добавить маршрут</div>
+      </div>
+      <div class="filter-small">Показать за:
+        <select class="form-select" aria-label="Default select example">
+          <option value="1">Неделя</option>
+          <option selected>Месяц</option>
+          <option value="2">Год</option>
+        </select>
+      </div>
+    </div>
+  </div>
+    <div id="calendar_table"></div>
+</div>
+<div class="right-calendar">
+  <div class="right-box">
+  <div class="right-calendar-name">Календарь</div>
+  <div class="look-calendar">
+    <table id="mini-calendar">
+      <thead>
+      <tr>
+      <td><b class="mini-calendar-arrow">‹</b>
+      <td class="mini-calendar-head" colspan="5">
+      <td><b class="mini-calendar-arrow">›</b>
+      <tr class="dn"><td>пн<td>вт<td>ср<td>чт<td>пт<td>сб<td>вс
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+</div>
+</section>
+<?php include ('./includes/modal.php'); ?>
+</body>
+</html>
+
+<script src="../js/calendar.js?<?php echo time();?>"></script>
+<script src="../js/date.js?<?php echo time();?>"></script>
+<script src="../js/fix.js?<?php echo time();?>"></script>

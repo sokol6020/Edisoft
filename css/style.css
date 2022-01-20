@@ -1,0 +1,1442 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+@media all and (-webkit-min-device-pixel-ratio:0) {
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    vertical-align: baseline;
+
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    font-family: unset;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr{
+    width: 100%;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+
+
+/**
+ *Fonts Start
+ */
+
+/* source-sans-pro-200 - latin_cyrillic */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-200.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-200italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-200italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-200italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-300italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-300italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-300 - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-300.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-300.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-regular - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-600 - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-600.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-700 - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-600italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-600italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-600italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-700italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-700italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-700italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-900 - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-900.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+  /* source-sans-pro-900italic - latin_cyrillic */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url('../fonts/source-sans-pro-v18-latin_cyrillic-900italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900italic.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/source-sans-pro-v18-latin_cyrillic-900italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+  }
+/**
+ *Fonts End
+ */
+
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
+
+
+body{
+    background-color: #ffffff !important; 
+}
+
+
+
+/**
+Навбар
+ */
+
+.navbar{
+    position: fixed;
+    width: 100vw;
+    z-index: 9999;
+    height: 52.2px;
+    background: #4a4a4a !important;
+    padding: 0px 30px;
+}
+
+.navbar .container-fluid{
+    padding-right: unset !important;
+    padding-left: unset !important;
+}
+
+.navbar .nav-link{
+    padding-right: 29px !important;
+    padding-left: unset !important;
+}
+
+.navbar .nav-link::after{
+    content: url('../images/headermenu/v2.png');
+    border: unset;
+    vertical-align: 0.1em;
+}
+
+.nav-link:hover:after{
+    filter: invert(69%) sepia(98%) saturate(0%) hue-rotate(227deg) brightness(77%) contrast(64%);
+}
+
+.head-profile .nav-item .dropdown-menu{
+    position: absolute !important; 
+    padding: 5px 10px !important;
+    margin-right: 0px !important;
+    width: auto !important;
+    flex-direction: column;
+    min-width: unset !important;
+    top: 45px     !important;
+    width: 100% !important;
+    height: auto !important;
+    background-color: #343a40;
+}
+
+.navbar .dropdown-menu{
+    position: fixed !important;
+    width: 100vw !important;
+    height: 53.5px;
+    top: 52.2px !important;
+    left: 0px !important;
+    margin-top: 0px !important;
+    background-color: #336699;
+    border: unset !important;
+    border-radius: 0px;
+    padding: unset;
+}
+
+.navbar  .dropdown-menu.show{
+    display: flex !important;
+    padding: 18px 30px;
+}
+
+.navbar .dropdown-item{
+    width: auto;    
+    padding: unset !important;
+    padding-left: unset !important;
+    padding-right: 29px !important;
+}
+
+.navbar .dropdown-item:hover{
+    background: unset !important;
+}
+
+.navbar .nav-link{
+    font-family: 'Source Sans Pro';
+    color: #ffffff !important;
+}
+
+.navbar .nav-link:hover{
+    color: #969696 !important;
+}
+
+.navbar .dropdown-item{
+    font-family: 'Source Sans Pro';
+    color: #ffffff !important;
+}
+
+.navbar .dropdown-item:hover{
+    color: #969696 !important;
+}
+
+.navbar-expand-lg .navbar-nav{
+    width: 100%;
+    align-items: center;
+}
+
+.head-profile{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: flex-end;
+}
+
+
+.head-profile img{
+    width: 16px;
+    height: 20px;
+    filter: invert(1);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.head-profile img:hover{
+    filter: invert(69%) sepia(98%) saturate(0%) hue-rotate(227deg) brightness(77%) contrast(64%);
+}
+
+.head-profile .nav-item:hover img{
+    color: #969696 !important;
+    filter: invert(69%) sepia(98%) saturate(0%) hue-rotate(227deg) brightness(77%) contrast(64%);
+}
+
+.alerts{
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    margin-right: 60px;
+}
+.numbers{
+    position: absolute;
+    background: #52ae30;
+    top: 2px;
+    left: 18px;    
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: "Source Sans Pro";
+    color: rgb( 255, 254, 254 );
+    line-height: 1;
+    width: 26px;
+    height: 14px;
+    text-align: center; 
+}
+
+.head-profile .nav-item{
+    display: flex;
+    align-items: center;
+}
+
+.head-profile .nav-link{
+    padding-right: unset !important;
+    padding-left: unset !important;
+}
+
+
+/**
+Основа страницы
+ */
+
+.main{
+    display: flex;
+}
+
+.left-calendar{
+    font-family: 'Source Sans Pro';
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.right-calendar{
+    font-family: 'Source Sans Pro';
+    width: 340px !important;
+    min-width: 340px;
+    height: 100vh;
+    background: #f5f5f5;
+    margin: 0 auto;
+    margin-right: 0px;
+    padding: 0px 30px;
+}
+
+.right-calendar-name{
+    font-size: 24px;
+    margin-top: 21px;
+    margin-bottom: 20px;
+}
+
+.container-head{
+    position: relative;
+    z-index: 1;
+}
+
+.head-string{
+    cursor: default;
+}
+
+.head-name{
+    margin-top: 23px;
+    cursor: default;
+    font-size: 30px;
+    font-family: "Source Sans Pro";
+    color: rgb( 74, 74, 74 );
+    line-height: 1.333;
+    width: 260px;
+    height: 26px;
+}
+
+.filters{
+    display: flex;
+    margin-top: 36px;
+}
+
+.filter-small{
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    cursor: default;
+}
+.filter-small .form-select{
+    border: 0;
+    border-radius: 0;
+    border-bottom: solid 1px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.filter-small .form-select:active, .form-select:focus{
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+
+li {
+    list-style-type: none;
+}
+
+.add-new{
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
+    margin: 0 auto;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-text:before {  
+    position: relative;  
+    content: '+';  
+    font-size: 15pt;  
+    width: 20px;
+    height: 20px;
+    text-align: center;  
+    color: #fff;  
+    background: #52ae30;  
+    float: left;  
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    margin-right: 10px;
+}  
+
+.add-text{
+    width: 100%;
+    white-space: pre;
+    display: flex;
+    align-items: center;
+}
+
+.input-group{
+    margin-bottom: unset !important;
+}
+
+.btn:hover{
+    background: unset !important;
+    outline: unset !important;
+    color: #969696 !important;
+    box-shadow: unset !important;
+}
+.btn:target{
+    background: unset !important;
+    color: #969696 !important;
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+.btn:active{
+    background: unset !important;
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+.btn:focus{
+    background: unset !important;
+    outline: unset !important;
+    color: #969696 !important;
+    box-shadow: unset !important;
+}
+
+
+.form-control:target, .form-control:focus{
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+
+
+
+/**
+Мини календарь
+ */
+
+.right-calendar .look-calendar {
+    width:auto;
+    margin: 0 auto; 
+    margin-left: -12px;   
+}
+#mini-calendar {
+    width: 100%;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    border-spacing:0px;
+}
+
+.mini-calendar-head{
+    font-size: 16px;
+    font-weight: bold;
+    cursor: default;
+    vertical-align: middle;
+}
+.mini-calendar-arrow{
+    font-size: 40px;
+    cursor: pointer;
+}
+#mini-calendar thead tr:first-child {
+    line-height: 30px;
+}
+#mini-calendar thead tr:last-child {
+    font-size: 12px;
+    color: #767676;
+    cursor: default;
+}
+#mini-calendar thead tr:nth-child(1) td:nth-child(2) {
+color: #323232;
+}
+#mini-calendar thead tr:nth-child(1) td:nth-child(1):hover,
+#mini-calendar thead tr:nth-child(1) td:nth-child(3):hover {
+cursor: pointer;
+}
+#mini-calendar tbody tr{
+    margin: 10px 0px;
+}
+#mini-calendar tbody td{
+    color: #2c567a;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+#mini-calendar tbody td p{
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+}
+#mini-calendar tbody td:hover p{
+    border: 1px solid #52ae30;
+}
+#mini-calendar tbody td.today {
+    font-weight: bold;
+    color: #52ae30;
+    border:rgb(13, 24, 9)lid #f5f5f5;
+    border-radius: 5px;
+}
+
+
+
+/**
+Основной календарь
+ */
+
+.left-calendar #calendar_table {
+    width:100%;
+    margin: 0 auto; 
+    font-family: 'Source Sans Pro';
+    margin-top: 40px;
+}
+#calendar_table .calendar{
+    width:100%;
+}
+.head-month{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+.head-days{
+    cursor: default;
+    height: 25px;
+    border-bottom: 2px solid #d2d2d2;
+}
+.navigation{
+    font-size: 16px;
+    font-weight: bold;
+    cursor: default;
+    vertical-align: middle;
+    color: #323232;
+    margin: 0px 10px;
+}
+
+.arrow{
+    cursor: pointer;
+}
+
+.head-days th{
+    padding-left: 10px;
+    font-weight: normal;
+}
+
+#calendar_table .main-day{
+    width: 200px;
+    height: 120px;
+    padding-top: 10px;
+    padding-left: 10px;
+    cursor: default;
+}
+.tr-table{
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.today{
+    color: #52ae30;
+    background:  #f5f5f5;
+}
+
+.holiday{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #323232;
+}
+.holiday::before{
+    content: "";
+    width: 5px;
+    height: 60px;
+    background: #ff6600;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.worker{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #323232;
+    cursor: pointer;
+}
+.worker:hover{
+    color: #52ae30;
+}
+.worker::before{
+    content: "";
+    width: 5px;
+    height: 15px;
+    background: #52ae30;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.more-workers{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #323232;
+    cursor: pointer;
+}
+.more-workers:hover{
+    color: #52ae30;
+}
+
+.more-workers-table{
+    overflow: auto;
+    max-height: 138px;
+    width: auto;
+    height: auto;
+    margin-left: 0px;
+    text-align: start;
+    padding: 10px 15px;
+    font-size: 12px;
+    font-family: "Source Sans Pro";
+    margin-right: 15px;
+}
+.more-workers-table p:hover{
+    color: #52ae30;
+    cursor: pointer;
+}
+
+
+/**
+Скроллбар
+ */
+
+:root {
+--scrollbarBg: rgba(255, 255, 255, 0.8);
+--scrollbarThumb: rgba(77, 77, 77, 0.384);
+--scrollbarWidth: 8px;
+--scrollbarBorder: 1px solid var(--scrollbarBg);
+--scrollbarBorderRadius: calc(var(--scrollbarWidth) / 2);
+}
+::-webkit-scrollbar {
+width: var(--scrollbarWidth);
+}
+::-webkit-scrollbar-track {
+background: var(--scrollbarBg);
+border-radius: var(--scrollbarBorderRadius);
+}
+::-webkit-scrollbar-thumb {
+background-color: var(--scrollbarThumb);
+border-radius: var(--scrollbarBorderRadius);
+border: var(--scrollbarBorder);
+}
+
+
+
+/**
+Модалка
+ */
+
+.input_date{
+    position: relative;
+}
+.input_date span{
+    left: 110px;
+    top: 12px;
+    position: absolute;
+}
+
+#calendar{
+    display: none;
+    position: absolute;
+    left: 38px;
+    background: #f5f5f5;
+    padding: 5px 10px;
+}
+
+#calendar .date-set{
+    cursor: pointer;
+    margin: 3px 0px;
+}
+#calendar .date-set:hover{
+    background: #fff;
+}
+
+.modal-dialog{
+    max-width: 1012px;
+    margin-right: 0px;
+    height: 100% !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 52px;
+}
+
+.modal-body{
+    padding: 0px 30px;
+}
+
+.modal-content{
+    height: 100%;
+    border-radius: 0;
+    border: unset;
+}
+
+.modal-header{
+    border-bottom: unset;
+    padding: 20px 30px;
+}
+
+.modal-title{
+    font-size: 30px;
+    font-family: "Source Sans Pro";
+    color: rgb( 74, 74, 74 );
+    line-height: 1.333;
+    width: 311px;
+    height: auto;
+    z-index: 518;
+}
+
+.modal-footer{
+    border: 0;
+}
+
+.close{
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    background-image: url(../images/headermenu/close.png);
+    background-size: contain;
+    transition: .3s all ease-in-out;
+    position: absolute;
+    left: -40px;
+}
+
+.modal-dialog input{
+    border-radius: 5px;
+    border: 1px solid #32323288;
+    padding: 0px 10px;
+}
+
+.ma-day{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+    color: rgb( 74, 74, 74 );
+    cursor: default;
+}
+
+.ma-day input{
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+    color: rgb( 74, 74, 74 );
+    line-height: 1.25;
+    cursor: text;
+}
+
+.names-ma-day{
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Source Sans Pro";
+    color: rgb( 74, 74, 74 );
+    line-height: 1.111;    
+    border-bottom: 1px solid rgb( 74, 74, 74 );  
+    padding: 0px 0px;
+    margin-top: 20px;
+}
+
+.torg-ma{
+    color: rgb( 51, 102, 153 );
+    line-height: 1.111;
+    border-bottom: 2px solid rgb( 51, 102, 153 );
+    padding-bottom: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.org-ma{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.pot-ma{
+    cursor: pointer;
+}
+
+.inp-ma{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.inp-ma input{
+    font-family: "Source Sans Pro";
+    border-width: 1px;
+    border-color: rgb( 210, 210, 210 );
+    border-style: solid;
+    border-radius: 3px;
+    background-color: rgb( 255, 255, 255 );
+    width: 186px;
+    height: 37px; 
+    margin-right: 5px;     
+}
+.inp-ma input:last-child{
+    margin-right: 0px;
+}
+
+.tab-ma table tr:first-child{
+    width: auto;
+    height: 30px;
+}
+
+.tab-ma table tr{
+    font-family: "Source Sans Pro";
+    width: auto;
+    height: 30px;
+    border-bottom: 2px solid rgba(124, 124, 124, 0.705);  
+}
+
+.tab-ma table tr th{
+    padding: 10px 5px;
+    padding-left: 10px;
+    font-weight: normal;
+}
+
+.tab-ma table tr td{
+    vertical-align: middle;
+    padding: 10px 5px;
+    padding-left: 10px;
+    cursor: default;
+}
+
+.tab-ma table tr td:last-child{
+    padding-right: 0px;
+}
+
+.tab-ma table tr td:nth-child(2){
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-ma table tr td:nth-child(2):hover{
+    color: #52ae30;
+}
+
+.tab-ma table tr:hover{
+    background: #f5f5f5;
+}
+
+.tab-ma input{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+}
+
+label {
+    position: relative;
+    z-index: 2;
+    margin-top: -20px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 0px solid #88a;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3) inset;
+    border-radius: 10%;
+}
+
+input:checked + label {
+    background-color: #52ae30;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1) inset;
+    text-align: center;
+}
+input:checked + label::after {
+    z-index: 1;
+    top: 1.5px;
+    position: relative;
+    content:'\2714';
+    color: #fff;
+}
+
+.modal-footer .btn-primary{
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+    color: rgb( 255, 255, 255 );
+    line-height: 1.25;
+    border-radius: 3px;
+    background-color: rgb( 82, 174, 48 );
+    width: 187px;
+    height: 39px;
+    border: 0;
+    margin: 0 auto;
+    margin-left: 0px;
+    margin-top: 20px;
+}
+
+.modal-footer .btn-primary:hover{
+    background: #767676 !important;
+    color: #fff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tooltip {
+    top: 10px !important;
+}
+
+.tooltip .tooltip-arrow{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(215deg) brightness(103%) contrast(102%);
+}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+    border-top-color: unset; /* цвет стрелочки (по умолчанию #000)*/
+    background-color: #fff; /* цвет фона (по умолчанию #000) */
+}
+
+.tooltip-inner {
+    display: flex;
+    width: auto;
+    max-width: unset; /* максимальная ширина подсказки (по умолчанию 200px) */
+    color: #230B00; /* цвет шрифта */
+    background-color: #fff; /* цвет фона (по умолчанию #000) */
+    box-sizing: border-box;    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+
+.class-tooltip{
+    width: auto;
+    max-width: 232px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.class-tooltip:last-child{
+    max-width: 150px;
+    margin-right: 0px;
+}
+
+
+.head-tooltip{
+    display: flex;
+    white-space: nowrap;
+}
+
+.class-tooltip p{
+    margin: 0 auto;
+    margin-left: 0px;
+    font-size: 10px;
+    color: rgb( 118, 118, 118 );
+    text-align: left;
+    cursor: default;
+}
+
+.head-tooltip p:first-child{
+    margin: 0 auto;
+    margin-left: 0px;
+}
+.head-tooltip p:last-child{
+    margin-right: 0px;
+}
+
+.body-tooltip-info{
+    text-align: left;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+} 
+
+.body-tooltip-info:hover{
+    color: #52ae30;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1350px) and (min-width: 993px){
+}
+
+
+
+
+
+}
