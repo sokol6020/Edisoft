@@ -84,12 +84,12 @@ calendar2.drawCalendar = function(month,year) {
   tmp+='<div class="head-month">';
   tmp+='<div class="navigation arrow" '+
        'onclick="calendar2.drawCalendar('+(month>1?(month-1):12)+
-       ','+(month>1?year:(year-1))+');calendarReady();"><img src="../images/headermenu/v3.png" alt=""><\/div>';
+       ','+(month>1?year:(year-1))+');calendarReady();"><img src="https://sokol6020.github.io/Edisoft/images/headermenu/v3.png" alt=""><\/div>';
   tmp+='<div colspan="5" class="navigation">'+
        calendar2.monthName[(month-1)]+'  '+year+'<\/div>';
   tmp+='<div class="navigation arrow" '+
        'onclick="calendar2.drawCalendar('+(month<12?(month+1):1)+
-       ','+(month<12?year:(year+1))+');calendarReady();"><img src="../images/headermenu/v1.png" alt=""><\/div>';
+       ','+(month<12?year:(year+1))+');calendarReady();"><img src="https://sokol6020.github.io/Edisoft/images/headermenu/v1.png" alt=""><\/div>';
   tmp+='<\/div>';
 
   // Шапка таблицы с днями недели
