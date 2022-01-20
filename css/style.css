@@ -1150,6 +1150,7 @@ border: var(--scrollbarBorder);
 
 .modal-footer{
     border: 0;
+    padding: unset;
 }
 
 .close{
