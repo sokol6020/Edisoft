@@ -1063,25 +1063,26 @@ cursor: pointer;
 Скроллбар
  */
 
-:root {
---scrollbarBg: rgba(255, 255, 255, 0.8);
---scrollbarThumb: rgba(77, 77, 77, 0.384);
---scrollbarWidth: 8px;
---scrollbarBorder: 1px solid var(--scrollbarBg);
---scrollbarBorderRadius: calc(var(--scrollbarWidth) / 2);
-}
-::-webkit-scrollbar {
-width: var(--scrollbarWidth);
-}
-::-webkit-scrollbar-track {
-background: var(--scrollbarBg);
-border-radius: var(--scrollbarBorderRadius);
-}
-::-webkit-scrollbar-thumb {
-background-color: var(--scrollbarThumb);
-border-radius: var(--scrollbarBorderRadius);
-border: var(--scrollbarBorder);
-}
+ :root {
+    --scrollbarBg: rgba(255, 255, 255, 0.8);
+    --scrollbarThumb: rgba(77, 77, 77, 0.384);
+    --scrollbarWidth: 8px;
+    --scrollbarBorder: 1px solid var(--scrollbarBg);
+    --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 2);
+    }
+    ::-webkit-scrollbar {
+    width: var(--scrollbarWidth);
+    }
+    ::-webkit-scrollbar-track {
+        width: 8px;
+    background: #d8d8d8;
+    border-radius: var(--scrollbarBorderRadius);
+    }
+    ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbarThumb);
+    border-radius: var(--scrollbarBorderRadius);
+    border: var(--scrollbarBorder);
+    }
 
 
 
@@ -1432,10 +1433,12 @@ input:checked + label::after {
 
 
 
+@media screen and (max-width: 1696px){
+    p{
+        font-size: 12px;
+    }
 
-@media screen and (max-width: 1350px) and (min-width: 993px){
 }
-
 
 
 
